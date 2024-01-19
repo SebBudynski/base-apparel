@@ -1,4 +1,13 @@
-console.log('hello');
+"use strict";
 
+const submit = document.querySelector(".submit");
+const hidden = document.querySelector(".hidden");
+const message = document.querySelector(".message");
 
-// https://www.google.com/search?q=how+to+move+button+to+input+field+css&oq=how+to+move+button+to+input+field+css&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTI2MjEzajBqNKgCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:d1818379,vid:kr5nR6qHScA,st:0 
+console.log(submit);
+console.log(hidden);
+console.log(message);
+
+submit.addEventListener("click", () => {
+  document.querySelector(".message").classList.toggle("hidden");
+});
