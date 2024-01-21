@@ -10,11 +10,6 @@
   --Dark-Grayish-Red: hsl(0, 6%, 24%);
 }
 
-
-/* wystylować znaczek error */
-/* napisać JS */
-
-
 main {
   min-height: 100vh;
   font-family: "Josefin-sans", sans-serif;
@@ -26,8 +21,8 @@ main {
   background-size: 70% 100%;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
-  grid-template-columns: 10vw 10vw 10% 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+  grid-template-rows: repeat(10,10vh);
+  grid-template-columns: repeat(10,10vh);
 }
 
 .logo {
@@ -97,9 +92,9 @@ form input::placeholder {
   right: 0px;
   top: -1px;
   border-radius: 25px;
-  padding: .9rem 3rem;
+  padding: 0.9rem 3rem;
   border: none;
-  box-shadow: 0 0.5rem 20px hsl(0, 36%, 70%, 0.5);
+  box-shadow: 0 0.5rem 20px hsl(0, 36%, 70%, 0.8);
 }
 
 .message {
@@ -108,11 +103,20 @@ form input::placeholder {
   line-height: 0;
 }
 
+.error-icon {
+  position: absolute;
+  right: 7.5rem;
+  top: 0.75rem;
+}
+
 .hidden {
   display: none;
 }
 
-/* small screen */
+
+
+
+/*////////////////////////// small screen ///////////////////////*/
 @media (max-width: 768px) {
   .content {
     display: flex;
@@ -140,7 +144,7 @@ form input::placeholder {
     font-weight: 600;
     letter-spacing: 1.2rem;
   }
-  
+
   p {
     padding: 1rem 2.2rem;
     text-align: center;
@@ -152,16 +156,21 @@ form input::placeholder {
     margin: 1rem 2.2rem;
   }
 
-  .submit{
-    padding: .6rem 1.5rem;
+  .submit {
+    padding: 0.6rem 1.5rem;
   }
 
   form input {
     padding: 0.7rem;
   }
 
-  .message{
-  padding-left: 3rem;
-    text-align:start
+  .message {
+    padding-left: 3rem;
+    text-align: start;
+  }
+
+  .error-icon {
+    right: 4rem;
+    top: 0.5rem;
   }
 }
